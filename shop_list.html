@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background: lightgray;
+            float: left;
+        }
+        span{
+            line-height: 40px;
+            color: darkorchid;
+        }
+        input{
+            width: 20px;
+            height: 20px;
+        }
+        button{
+            background: lightgreen;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="span">商品名称: 黑人牙刷</span><br>
+        购买数量:<input type="text" id = 'inp'>
+        <button id='btn'>加入购物车</button>
+        
+    </div>
+    
+    <!-- <script src="a.php"></script> -->
+    <script>
+        var $span = document.getElementById('span');
+        var $inp = document.getElementById('inp');
+        var $btn = document.getElementById('btn');
+        $btn.onclick = function(){
+            var val = $inp.value;
+            console.log(val);
+            sessionStorage.input = val;
+            location.href = 'shop_car.html';
+        }
+        localStorage.clear();
+    </script>
+</body>
+</html>
